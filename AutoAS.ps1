@@ -8,7 +8,6 @@
 	===========================================================================
 #>
 function Get-AutoASDumpRs ($dumpfile, $outfile) {
-	$dumpfile = "C:\Users\Administrator\Desktop\MEMORY.DMP"
 	#根据Dump文件大小计算dump分析时长
 	$sleeptime_filesizetmp = Get-ChildItem $dumpfile.FullName -recurse | Measure-Object -property length -sum
 	$sleeptime_filesize = $sleeptime_filesizetmp.sum
